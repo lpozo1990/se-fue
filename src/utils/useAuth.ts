@@ -113,6 +113,7 @@ async function handleLogout() {
     }
 
     alert('You have signed out!')
+    return true
   } catch (err) {
     alert('Unknown error signing out')
     console.error('Error', err)

@@ -32,19 +32,35 @@
     </button>
   </div> 
   <div class="flex-none">
-    <div class="avatar">
+      <input @click="logout" type="button" value="Salir" class="btn btn-primary">
+    <!-- <div class="avatar">
       <div class="rounded-full w-10 h-10 m-1">
         <img src="https://i.pravatar.cc/500?img=32">
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
 </template>
 
 <script>
+import { supabase } from '@/utils/supabase';
+import { handleLogout } from '@/utils/useAuth'
+import router from '@/routes';
 export default {
-    name: "Navbar"
+    name: "Navbar",
+    setup() {
+        const currentUser = supabase.auth.user();
+        const logout = () => {
+            handleLogout().then(() => {
+                router.push({ name: "index"})
+            })
+        }
+        return {
+            currentUser,
+            logout
+        }
+    }
 
 }
 </script>
