@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router'
 import {defineComponent, ref, watch} from 'vue'
 import { handleLogin, handleOAuthLogin, handleSignup, handlePasswordReset, isLoggedIn } from '../utils/useAuth'
 export default defineComponent({
@@ -41,6 +42,7 @@ export default defineComponent({
         const email = ref("")
       const password = ref("")
       const register = ref(true)
+       const router = useRouter();
 
       const signUp = () => {
         handleSignup({
@@ -53,6 +55,8 @@ export default defineComponent({
         handleLogin({
           email: email.value,
           password: password.value
+        }).then(data => {
+          router.push('home')
         })
       }
 

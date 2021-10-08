@@ -26,6 +26,7 @@ async function handleLogin(credentials: Credentials) {
       alert('Check your email for the login link!')
     }
     isLoggedIn.value = true
+    return user
   } catch (error) {
     console.error('Error thrown:', error.message)
     alert(error.error_description || error)

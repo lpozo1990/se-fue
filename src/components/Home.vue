@@ -19,7 +19,7 @@
 import Login from '../components/Login'
 
 export default {
-    components: {Layout, Login},
+    components: { Login },
     setup() {
     }
 }
