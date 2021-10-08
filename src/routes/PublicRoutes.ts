@@ -1,14 +1,11 @@
 import { RouteRecordRaw } from 'vue-router';
+import Home from '@/components/Home.vue'
 
 export const PublicRoutes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'home',
-        redirect: '/admin/dashboard',
+        component:  Home,
     },
-    {
-        path: '/admin/dashboard',
-        name: 'admin.dashboard',
-        component: () => import(/* webpackChunkName: "about" */ '@/modules/Dashboard/index.vue'),
-    },
+   
 ];
