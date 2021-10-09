@@ -1,8 +1,7 @@
 import { createApp } from 'vue';
-import App from '@/modules/App/index.vue';
+import App from '@/App.vue';
 import routes from './routes';
-import store from './store';
 
 import './index.css'
 
-createApp(App).use(store).use(routes).mount('#app');
+createApp(App).use(routes).mount('#app');
