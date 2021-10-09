@@ -10,18 +10,16 @@
     "code:check": "prettier --check \"src/**/*.{ts,css,vue,js,html}\""
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "@popperjs/core": "^2.9.2",
     "@supabase/supabase-js": "^1.24.0",
+    "@vue-leaflet/vue-leaflet": "^0.6.1",
     "autoprefixer": "^9",
-    "bootstrap": "^5.0.1",
     "daisyui": "^1.14.2",
+    "leaflet": "^1.7.1",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^3.1.1",
     "vue-class-component": "^8.0.0-0",
-    "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.16",
@@ -29,7 +27,6 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.1.1",
     "@vue/test-utils": "^2.0.0-0",

@@ -1,16 +1,26 @@
 <template>
     <navbar/>
+    <div class="flex bg-">
+
+    
+    <map-section/>
+    <panel/>
+    </div>
 </template>
 
 <script>
-import {defineComponent, ref, watch} from 'vue'
+import {defineComponent, onBeforeMount, ref, watch} from 'vue'
 import Navbar from "./Navbar.vue"
+import MapSection from './Map.vue'
+import Panel from './Panel.vue'
+
+
 export default defineComponent({
     name: "Dashboard",
     components: {
-        Navbar
-    }
-
+        Navbar, MapSection, Panel
+    },
+   
 })
 </script>
 
